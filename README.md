@@ -42,23 +42,13 @@ print("phi", sdf.truth_phi(pts))
 ```
 
 ## Visualize four scenarios in a panel
-```python
-import matplotlib.pyplot as plt
-from survi_scenarios import load_elevation_scenario
+Rendered with `python scripts_generate_panel.py`:
 
-names = ["flat_rect_small", "sloped_rotated_rect",
-         "ripples_two_angles", "mountainous_600x400"]
-fig, axes = plt.subplots(2, 2, figsize=(10, 8))
-for ax, name in zip(axes.ravel(), names):
-    ds = load_elevation_scenario(name)
-    grid = ds.samples.pivot(index="y", columns="x", values="z")
-    im = ax.imshow(grid.values, origin="lower",
-                   extent=[grid.columns.min(), grid.columns.max(),
-                           grid.index.min(), grid.index.max()])
-    ax.set_title(name)
-fig.colorbar(im, ax=axes.ravel().tolist(), shrink=0.6, label="z (m)")
-plt.tight_layout()
-plt.show()
+![Scenario panel](docs/scenario_panel.png)
+
+Regenerate the image locally:
+```bash
+python scripts_generate_panel.py
 ```
 
 ## Tests
