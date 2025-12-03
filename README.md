@@ -51,6 +51,17 @@ Regenerate the image locally:
 python scripts_generate_panel.py
 ```
 
+## 3D Plotly renders
+Generated with `python scripts_generate_plotly.py` (uses plotly + kaleido; script downloads a local Chromium if needed).
+
+Elevation surfaces (Plotly Surface):
+![Mountainous](docs/elev_mountainous.png)
+![Alpine ridge](docs/elev_alpine.png)
+
+SDF isosurfaces (Plotly Isosurface):
+![Torus](docs/sdf_torus.png)
+![Cave network](docs/sdf_cave.png)
+
 ## Tests
 ```
 PYTHONPATH=src pytest tests -q

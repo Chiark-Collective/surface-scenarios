@@ -7,4 +7,5 @@ build/
 .env
 .pypi_token.env
 .venv
+.chrome/
 .DS_Store
