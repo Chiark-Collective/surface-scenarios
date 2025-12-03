@@ -41,19 +41,6 @@ pts = sdf.raw_surface[["x","y","z"]].to_numpy()[:5]
 print("phi", sdf.truth_phi(pts))
 ```
 
-## Visualize four scenarios in a panel
-Rendered with `python scripts_generate_panel.py`:
-
-![Scenario panel](docs/scenario_panel.png)
-
-Regenerate the image locally:
-```bash
-python scripts_generate_panel.py
-```
-
-## Plotly panel (2x2)
-Generated with `python scripts_generate_plotly.py` (uses plotly + kaleido; script will download a local Chromium if needed).
-
 ![Plotly panel](docs/plotly_panel.png)
 
 ## Tests
