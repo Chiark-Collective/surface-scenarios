@@ -1,4 +1,4 @@
-# survi-scenarios
+# surface-scenarios
 
 Standalone synthetic elevation and 3D SDF scenario library. Ships procedural generators, bundled manifests, and lightweight loaders that return pandas DataFrames plus analytic truth functions.
 
