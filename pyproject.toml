@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "surface-scenarios"
-version = "0.2.0"
+version = "0.3.0"
 description = "Standalone synthetic elevation and SDF scenario library extracted from Survi"
 readme = "README.md"
 authors = [{name = "Survi Team"}]
@@ -28,6 +28,7 @@ classifiers = [
 
 [project.optional-dependencies]
 mesh = ["trimesh>=4.0"]
+trenchfoot = ["trenchfoot>=0.2.3", "trimesh>=4.0"]
 
 [project.urls]
 Homepage = "https://example.com/survi-scenarios"

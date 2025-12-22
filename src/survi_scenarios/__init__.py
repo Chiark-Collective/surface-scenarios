@@ -21,6 +21,27 @@ from .synthetic_3d import (
 )
 from .types import ElevationSurface, SDFSurface
 
+# Trenchfoot integration (optional dependency)
+try:
+    from .trenchfoot_loader import list_trenchfoot_scenarios, load_trenchfoot_scenario
+    _TRENCHFOOT_AVAILABLE = True
+except ImportError:
+    _TRENCHFOOT_AVAILABLE = False
+
+    def list_trenchfoot_scenarios() -> list[str]:
+        """Stub when trenchfoot is not installed."""
+        raise ImportError(
+            "trenchfoot is not installed. "
+            "Install with: pip install surface-scenarios[trenchfoot]"
+        )
+
+    def load_trenchfoot_scenario(name: str, **kwargs):
+        """Stub when trenchfoot is not installed."""
+        raise ImportError(
+            "trenchfoot is not installed. "
+            "Install with: pip install surface-scenarios[trenchfoot]"
+        )
+
 __all__ = [
     "list_elevation_scenarios",
     "load_elevation_scenario",
@@ -37,6 +58,8 @@ __all__ = [
     "make_torus",
     "ElevationSurface",
     "SDFSurface",
+    "list_trenchfoot_scenarios",
+    "load_trenchfoot_scenario",
 ]
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
