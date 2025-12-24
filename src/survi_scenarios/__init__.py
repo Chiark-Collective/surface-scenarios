@@ -62,4 +62,4 @@ __all__ = [
     "load_trenchfoot_scenario",
 ]
 
-__version__ = "0.3.0"
+__version__ = "0.3.1"
